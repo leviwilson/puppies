@@ -33,7 +33,9 @@ public class PuppyAdapter extends ArrayAdapter<Puppy> {
         }
         
         final Puppy thePuppy = thePuppies.get(position);
-        setText(theView, id.puppy_name, thePuppy.getName());
+        setText(theView, id.name, thePuppy.getName());
+        setText(theView, id.breed, thePuppy.getBreed());
+        setText(theView, id.gender, thePuppy.getGender());
         return theView;
     }
     
