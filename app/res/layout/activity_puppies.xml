@@ -1,14 +1,38 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
 
-    <TextView
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/puppies_image"
+        android:src="@drawable/puppies_logo" />
+
+    <View style="@style/HorizontalRule" />
+
+    <RelativeLayout
+        android:id="@+id/view_puppies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        tools:context=".PuppiesActivity" />
+        android:clickable="true" >
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:text="List Puppies" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/chevron_blue" />
+    </RelativeLayout>
+
+    <View style="@style/HorizontalRule" />
+
+</LinearLayout>
