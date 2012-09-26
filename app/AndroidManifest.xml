@@ -16,9 +16,17 @@
             android:label="@string/title_activity_puppies" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".PuppiesListActivity"
+            android:label="@string/title_activity_puppies_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.leandog.puppies.PuppiesActivity" />
         </activity>
     </application>
 
