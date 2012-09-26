@@ -30,6 +30,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.leandog.puppies.PuppiesActivity" />
         </activity>
+        <activity
+            android:name=".PuppyDetailsactivity"
+            android:label="@string/title_activity_puppy_detailsactivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.leandog.puppies.PuppiesListActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -28,4 +28,8 @@ public class Puppy {
     public String getGender() {
         return puppy.gender;
     }
+
+    public String getDescription() {
+        return puppy.description;
+    }
 }
