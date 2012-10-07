@@ -1,22 +1,29 @@
 package com.leandog.puppies;
 
+import static com.leandog.puppies.view.ViewHelper.findFor;
+import static com.leandog.puppies.view.ViewHelper.setText;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.imageloader.ImageLoader;
 import com.google.gson.Gson;
 import com.leandog.puppies.R.id;
 import com.leandog.puppies.data.Puppy;
 
-import static com.leandog.puppies.view.ViewHelper.*;
-
 public class PuppyDetailsactivity extends Activity {
 
     private Puppy thePuppy;
+    private ImageLoader imageLoader;
+    
+    public PuppyDetailsactivity() {
+        imageLoader = new ImageLoader();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,9 @@ public class PuppyDetailsactivity extends Activity {
         
         final TextView theDescription = findFor(this, id.description);
         theDescription.setText(Html.fromHtml(thePuppy.getDescription()));
+        
+        final ImageView headshot = findFor(this, id.headshot);
+        imageLoader.bind(headshot, "http://puppies.herokuapp.com/assets/" + thePuppy.getImage(), null);
     }
 
     @Override

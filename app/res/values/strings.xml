@@ -9,5 +9,6 @@
     <string name="go_to_the_puppies_list">go to the puppies list</string>
     <string name="list_puppies">List Puppies</string>
     <string name="title_activity_puppy_detailsactivity">Puppy Details</string>
+    <string name="puppy_headshot">Puppy headshot</string>
 
 </resources>

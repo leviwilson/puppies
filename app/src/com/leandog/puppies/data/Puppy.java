@@ -32,4 +32,8 @@ public class Puppy {
     public String getDescription() {
         return puppy.description;
     }
+
+    public String getImage() {
+        return puppy.image_url;
+    }
 }

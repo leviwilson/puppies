@@ -70,7 +70,7 @@ public class PuppiesListActivity extends Activity {
 
         @Override
         protected void onPostExecute(List<Puppy> thePuppies) {
-            theDialog.hide();
+            theDialog.dismiss();
             super.onPostExecute(thePuppies);
             thePuppiesList.setAdapter(new PuppyAdapter(PuppiesListActivity.this, thePuppies));
         }

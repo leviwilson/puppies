@@ -2,25 +2,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="25sp" >
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/headshot"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:contentDescription="@string/puppy_headshot"
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/name"
+        style="@style/Title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#a66f00"
-        android:textSize="25sp" />
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/age"
+            style="@style/Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/breed"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/gender"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/breed"
+            android:layout_below="@+id/breed" />
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/breed"
+        android:id="@+id/summary"
+        style="@style/Summary"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:textStyle="bold|italic" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 </LinearLayout>

@@ -5,34 +5,19 @@
     android:orientation="vertical"
     android:padding="15dp" >
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:contentDescription="@string/puppies_image"
-        android:src="@drawable/puppies_logo" />
+    <!-- <ImageView -->
+    <!-- android:id="@+id/paws" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_gravity="center_vertical|center_horizontal" -->
+    <!-- android:contentDescription="@string/puppies_image" /> -->
 
     <View style="@style/HorizontalRule" />
 
-    <RelativeLayout
+    <TextView
         android:id="@+id/view_puppies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:text="@string/list_puppies" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:contentDescription="@string/go_to_the_puppies_list"
-            android:src="@drawable/chevron_blue" />
-    </RelativeLayout>
+        style="@style/ChevronButtonItem"
+        android:text="@string/list_puppies" />
 
     <View style="@style/HorizontalRule" />
 
