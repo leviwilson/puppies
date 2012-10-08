@@ -8,8 +8,7 @@
         android:id="@+id/headshot"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:contentDescription="@string/puppy_headshot"
-        android:scaleType="fitXY" />
+        android:contentDescription="@string/puppy_headshot" />
 
     <TextView
         android:id="@+id/name"

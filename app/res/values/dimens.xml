@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="large_header">25dp</dimen>
-    <dimen name="medium_header">15dp</dimen>
-    <dimen name="normal">11dp</dimen>
+    <dimen name="large_header">25sp</dimen>
+    <dimen name="medium_header">15sp</dimen>
+    <dimen name="normal">11sp</dimen>
 </resources>

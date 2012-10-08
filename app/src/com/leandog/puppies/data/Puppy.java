@@ -36,4 +36,5 @@ public class Puppy {
     public String getImage() {
         return puppy.image_url;
     }
+    
 }

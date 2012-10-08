@@ -2,12 +2,15 @@ package com.leandog.puppies;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.*;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 import com.leandog.puppies.R.id;
+import com.leandog.puppies.view.ViewHelper;
 
 public class PuppiesActivity extends Activity {
 
@@ -16,6 +19,16 @@ public class PuppiesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puppies);
         findViewById(id.view_puppies).setOnClickListener(new OnViewPuppiesListener());
+    }
+    
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        
+        final ImageView imageView = ViewHelper.findFor(this, id.paws);
+        final AnimationDrawable animation = (AnimationDrawable) imageView.getBackground();
+        animation.setOneShot(false);
+        animation.start();
     }
 
     @Override
