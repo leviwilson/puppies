@@ -5,7 +5,6 @@ import static com.leandog.puppies.view.ViewHelper.findFor;
 import java.util.List;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -55,12 +54,9 @@ public class PuppiesListActivity extends Activity {
 
     private final class AsyncPuppiesLoader extends AsyncTask<PuppiesLoader, Void, List<Puppy>> {
 
-        private ProgressDialog theDialog;
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            theDialog = ProgressDialog.show(PuppiesListActivity.this, null, "Loading the puppies...");
         }
 
         @Override
@@ -70,8 +66,8 @@ public class PuppiesListActivity extends Activity {
 
         @Override
         protected void onPostExecute(List<Puppy> thePuppies) {
-            theDialog.dismiss();
             super.onPostExecute(thePuppies);
+            PuppiesListActivity.this.findViewById(id.progress).setVisibility(View.GONE);
             thePuppiesList.setAdapter(new PuppyAdapter(PuppiesListActivity.this, thePuppies));
         }
     }
