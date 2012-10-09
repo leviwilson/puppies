@@ -4,6 +4,7 @@ import static com.leandog.puppies.view.ViewHelper.findFor;
 
 import java.util.List;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -30,6 +31,10 @@ public class PuppiesListActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_puppies_list);
+
+        final ActionBar actionBar = getActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(layout.happy_banner);
 
         thePuppiesList = findFor(PuppiesListActivity.this, id.the_puppies_list);
         thePuppiesList.setOnItemClickListener(new OnViewPuppyDetails());
@@ -61,6 +66,11 @@ public class PuppiesListActivity extends Activity {
 
         @Override
         protected List<Puppy> doInBackground(PuppiesLoader... loader) {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return loader[0].load();
         }
 

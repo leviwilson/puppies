@@ -10,5 +10,7 @@
     <string name="list_puppies">List Puppies</string>
     <string name="title_activity_puppy_detailsactivity">Puppy Details</string>
     <string name="puppy_headshot">Puppy headshot</string>
+    <string name="leandog_powered">powered by LeanDog</string>
+    <string name="content_happy_puppy">Happy Puppy</string>
 
 </resources>
